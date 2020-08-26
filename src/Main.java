@@ -26,36 +26,32 @@ public class Main{
         Boolean wholeNumberDivideByFive = number % 5 == 0;
 
         if (wholeNumberDivideByThree && wholeNumberDivideByFive)
-        {
             System.out.println("FizBuzz");
-        }
         else if (wholeNumberDivideByThree || wholeNumberDivideByFive)
         {
             if (wholeNumberDivideByThree)
             System.out.println("Buzz");
             else
             System.out.println("Fizz");
-        } else
-        {
-        System.out.println(number);
-        }
+        } 
+        else
+            System.out.println(number);
         // useing loop from left over numbers to 100 to display fizzBuzz
         while (number <= 100)
         {
             wholeNumberDivideByThree = number % 3 == 0;
             wholeNumberDivideByFive = number % 5 == 0;
             if (wholeNumberDivideByThree && wholeNumberDivideByFive)
-            {
                 System.out.println("FizBuzz");
-            }
             else if (wholeNumberDivideByThree || wholeNumberDivideByFive)
             {
                 if (wholeNumberDivideByThree)
                 System.out.println("Buzz");
                 else
                 System.out.println("Fizz");
-            } else
-            System.out.println(number);
+            } 
+            else
+                System.out.println(number);
             number++;
         }
     }
