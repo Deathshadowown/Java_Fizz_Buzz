@@ -21,9 +21,10 @@ public class Main{
         // div by 5 and 3 we get fizzbuzz
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter Number: ");
-        int number = scanner.nextInt();
-        Boolean wholeNumberDivideByThree = number % 3 == 0;
-        Boolean wholeNumberDivideByFive = number % 5 == 0;
+        int userNumber = scanner.nextInt();
+        Boolean wholeNumberDivideByThree = userNumber % 3 == 0;
+        Boolean wholeNumberDivideByFive = userNumber % 5 == 0;
+        int oneHundred = 100; // used for while loop
 
         if (wholeNumberDivideByThree && wholeNumberDivideByFive)
             System.out.println("FizBuzz");
@@ -35,12 +36,13 @@ public class Main{
             System.out.println("Fizz");
         } 
         else
-            System.out.println(number);
+            System.out.println(userNumber);
+        
         // useing loop from left over numbers to 100 to display fizzBuzz
-        while (number <= 100)
+        while (userNumber <= oneHundred)
         {
-            wholeNumberDivideByThree = number % 3 == 0;
-            wholeNumberDivideByFive = number % 5 == 0;
+            wholeNumberDivideByThree = userNumber % 3 == 0;
+            wholeNumberDivideByFive = userNumber % 5 == 0;
             if (wholeNumberDivideByThree && wholeNumberDivideByFive)
                 System.out.println("FizBuzz");
             else if (wholeNumberDivideByThree || wholeNumberDivideByFive)
@@ -51,8 +53,8 @@ public class Main{
                 System.out.println("Fizz");
             } 
             else
-                System.out.println(number);
-            number++;
+                System.out.println(userNumber);
+            userNumber++;
         }
     }
 }
