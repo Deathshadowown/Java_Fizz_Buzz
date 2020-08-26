@@ -38,7 +38,11 @@ public class Main{
         else
             System.out.println(userNumber);
         
-        // useing loop from left over numbers to 100 to display fizzBuzz
+        //useing loop from left over numbers to 100 to display fizzBuzz
+        System.out.print("Enter Number 1: WhileLoop or 2: ForLoop: ");
+        int whatLoop = scanner.nextInt();
+        if (whatLoop == 1)
+        {
         while (userNumber <= oneHundred)
         {
             wholeNumberDivideByThree = userNumber % 3 == 0;
@@ -56,5 +60,28 @@ public class Main{
                 System.out.println(userNumber);
             userNumber++;
         }
+        }
+        else if (whatLoop == 2)
+        {
+        for (int i = userNumber; userNumber < 100; i++)
+        {
+            wholeNumberDivideByThree = i % 3 == 0;
+            wholeNumberDivideByFive = i % 5 == 0;
+            if (wholeNumberDivideByThree && wholeNumberDivideByFive)
+                System.out.println("FizBuzz");
+            else if (wholeNumberDivideByThree || wholeNumberDivideByFive)
+            {
+                if (wholeNumberDivideByThree)
+                System.out.println("Buzz");
+                else
+                System.out.println("Fizz");
+            } 
+            else
+                System.out.println(userNumber);
+            userNumber++;
+        }
+        }
+        else
+        System.out.println("Invalid Number");
     }
 }
