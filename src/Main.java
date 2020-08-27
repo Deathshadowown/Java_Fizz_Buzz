@@ -19,6 +19,7 @@ public class Main{
         // div by 5 we get fizz
         // div by 3 we get buzz
         // div by 5 and 3 we get fizzbuzz
+        try {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter Number: ");
         int userNumber = scanner.nextInt();
@@ -43,6 +44,8 @@ public class Main{
         int whatLoop = scanner.nextInt();
         if (whatLoop == 1)
         {
+            if (userNumber > 100)
+            System.out.println("Number User Entered is greater than 100 only checks to 100");
         while (userNumber <= oneHundred)
         {
             wholeNumberDivideByThree = userNumber % 3 == 0;
@@ -63,6 +66,8 @@ public class Main{
         }
         else if (whatLoop == 2)
         {
+            if (userNumber > 100)
+            System.out.println("Number User Entered is greater than 100 only checks to 100");
         for (int i = userNumber; userNumber < 100; i++)
         {
             wholeNumberDivideByThree = i % 3 == 0;
@@ -83,5 +88,11 @@ public class Main{
         }
         else
         System.out.println("Invalid Number");
+    }catch (InputMismatchException e) {
+            System.out.println("Must enter a Number!.");
+        } catch (Exception e)
+        {
+            System.out.println("Something is wrong.");
+        }
     }
 }
